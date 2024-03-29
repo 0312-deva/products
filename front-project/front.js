@@ -4,7 +4,7 @@ containerDiv.classList.add('containerStyle')
 const getbyFrom = document.getElementById('getbyId')
 const addNewform =document.getElementById('addNew')
 
-fetch(`https://products-mruc.onrender.com`)
+fetch(`https://products-2.onrender.com`)
 .then(res =>res.json())
 .then(products=> generateUI(products))
 
