@@ -3,7 +3,7 @@ containerDiv.classList.add('containerStyle')
 
 
 window.addEventListener('load',()=> 
-fetch(`http://localhost:3000/products`)
+fetch(`https://products-2.onrender.com`)
 .then(res =>res.json())
 .then(products=> generateUI(products)))
 
