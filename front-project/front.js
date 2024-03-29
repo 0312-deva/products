@@ -1,12 +1,12 @@
 const containerDiv =document.getElementById("container")
 containerDiv.classList.add('containerStyle')
 
-const getbyFrom = document.getElementById('getbyId')
-const addNewform =document.getElementById('addNew')
-
-fetch(`https://products-2.onrender.com`)
-.then(res =>res.json())
-.then(products=> generateUI(products))
+const getAllbutton =document.getElementById("getall")
+getAllbutton.addEventListener('click', () => {
+  fetch('http://localhost:3000/products')
+    .then(res => res.json())
+    .then(data => generateUI(data.products))
+})
 
 function generateUI (products){
     products.map((product) => {
